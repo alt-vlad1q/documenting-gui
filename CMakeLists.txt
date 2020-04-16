@@ -15,7 +15,9 @@ set(CMAKE_CXX_FLAGS          "${CMAKE_CXX_FLAGS_RELEASE}")
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY  ${PROJECT_SOURCE_DIR}/bin)
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY  ${PROJECT_SOURCE_DIR}/lib)
 
-add_executable(${PROJECT_NAME} main.cpp)
+add_executable(${PROJECT_NAME} main.cpp
+    qml.qrc
+    )
 
 find_package(Boost REQUIRED COMPONENTS iostreams)
 target_link_libraries(${PROJECT_NAME} ${Boost_LIBRARIES})
